@@ -1,18 +1,25 @@
 <template>
-  <div>
-    <ul v-if="listType === 1">
-      <li v-for="item in data" :key="item.name" class="list1">
-        {{ item.name }} - {{ item.year }} - {{ item.class }}
+  <div v-if="listType === 1" class="type1 list-wrapper">
+    <ul>
+      <li v-for="item in data" :key="item.name">
+        Student: {{ item.name }}<br />
+        Year: {{ item.year }}, Room: {{ item.class }}
       </li>
     </ul>
-    <ul v-else-if="listType === 2">
+  </div>
+  <div v-if="listType === 2" class="type2 list-wrapper">
+    <ul>
       <li v-for="item in data" :key="item.title">
-        {{ item.title }} - {{ item.category }} - {{ item.rating }}
+        Title: {{ item.title }}<br />
+        Category: {{ item.category }} | {{ item.rating }} likes
       </li>
     </ul>
-    <ul v-else-if="listType === 3">
+  </div>
+  <div v-if="listType === 3" class="type3 list-wrapper">
+    <h1>Top 3 Winners</h1>
+    <ul>
       <li v-for="item in data" :key="item.rank">
-        {{ item.rank }} - {{ item.winner }}
+        {{ item.rank }} {{ item.winner }}
       </li>
     </ul>
   </div>
