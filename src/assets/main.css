@@ -21,6 +21,40 @@ a,
   }
 }
 
+.list-wrapper {
+  background: #ccc;
+  padding: 20px;
+}
+.list-wrapper.type3 {
+  background: #000;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ul li {
+  list-style: none;
+  padding: 12px;
+  color: #000;
+  border-radius: 10px;
+}
+.type1 li,
+.type2 li,
+.type3 li {
+  background: #fff;
+}
+.list-wrapper h1 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.type3 li {
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
 @media (min-width: 1024px) {
   body {
     display: flex;
